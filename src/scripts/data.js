@@ -36,3 +36,39 @@ export const servicesData = [
     description: "Urban design is the process of designing and shaping the physical features of cities, towns, and villages and planning for the provision of municipal services to residents and visitors."
   }
 ]
+export const reviewsData = [
+  {
+    name: 'John Doe',
+    image: {
+      src: "/img/bociort_baci.jpg",
+      alt: "John Doe",
+    },
+    reviewBody: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.',
+    rating: 5
+  },
+  {
+    name: 'John Doe',
+    image: {
+      src: "/img/bociort_baci.jpg",
+      alt: "John Doe",
+    },
+    reviewBody: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.',
+    rating: 5
+  }, {
+    name: 'John Doe',
+    image: {
+      src: "/img/bociort_baci.jpg",
+      alt: "John Doe",
+    },
+    reviewBody: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.',
+    rating: 5
+  }, {
+    name: 'John Doe',
+    image: {
+      src: "/img/bociort_baci.jpg",
+      alt: "John Doe",
+    },
+    reviewBody: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.',
+    rating: 5
+  }
+]

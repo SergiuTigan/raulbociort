@@ -2,8 +2,9 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import '../styles/Home.scss';
 import MainSection from '../components/MainSection.astro';
-import { servicesData } from '../scripts/services';
+import { reviewsData, servicesData } from '../scripts/data';
 import Service from '../components/Service.astro';
+import Review from '../components/Review.astro';
 ---
 <MainLayout title="Home">
   <MainSection/>
@@ -13,7 +14,26 @@ import Service from '../components/Service.astro';
   </div>
   <div class="grid md:grid-cols-2 grid-cols-1">
     {servicesData.map((service, index) => (
-  <Service {service}/>
+      <Service {service}/>
+    ))}
+  </div>
+  <div class="w-full flex flex-col md:flex-row justify-around mx-auto my-5">
+    <img src="/img/bociort_baci.jpg" class="w-96 h-96 border-[rgba(0,0,0,0.5)] border-solid border-2">
+    <div class="w-96 h-96 border-[rgba(0,0,0,0.5)] border-solid border-2 flex flex-col items-center justify-between text-left">
+      <p class="w-72 font-bold text-2xl leading-5 mt-12">PASSION & LOVE <br>FOR ARCHITECTURE.</p>
+      <p class="mb-12 px-10">There is no right fucking answer. The splendor of the mystery is that you don’t understand.
+                             The details are not the details. They make the fucking design. Respect your
+                             fucking craft. If you’re not being fucking honest with yourself
+                             how could you ever hope to communicate something meaningful to someone </p>
+    </div>
+  </div>
+  <div class="w-full flex flex-col items-center">
+    <p class="uppercase text-3xl my-5">Peste 200 de clienti aprecieaza serviciile mele.</p>
+    <p class="text-gray-400">Vivamus sagittis lacum</p>
+  </div>
+  <div class="grid md:grid-cols-2 grid-cols-1">
+    {reviewsData.map((review) => (
+      <Review {review}/>
     ))}
   </div>
 </MainLayout>

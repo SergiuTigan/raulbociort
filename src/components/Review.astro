@@ -1,0 +1,14 @@
+---
+const { review } = Astro.props;
+const { image, name, reviewBody, rating } = review;
+---
+
+<div class="flex items-center justify-center mx-auto p-2 w-[80%]">
+  {image &&
+    <img src={image.src} alt={image.alt} class="w-32 h-32 border-solid border-black border-2 p-2"/>
+  }
+  <div class="flex flex-col w-2/5 text-left relative ml-5">
+    <h1 class="text-gray-900 font-bold text-xl mt-4">{name}</h1>
+    <blockquote class="text-gray-500  text-left">"{reviewBody}"</blockquote>
+  </div>
+</div>
