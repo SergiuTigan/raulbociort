@@ -1,0 +1,40 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import '../styles/Home.scss';
+import MainSection from '../components/MainSection.astro';
+import { servicesData } from '../scripts/services';
+import Service from '../components/Service.astro';
+---
+<MainLayout title="Home">
+  <MainSection/>
+  <div class="flex flex-col mx-auto text-left w-[55%] mt-12 font-bold">
+    <h1 class="text-gray-900">TELLUS AC RISUS SERVICES</h1>
+    <p class="text-gray-500">Vivamus sagittis lacus vel augue laoreet futum</p>
+  </div>
+  <div class="grid md:grid-cols-2 grid-cols-1">
+    {servicesData.map((service, index) => (
+  <Service {service}/>
+    ))}
+  </div>
+</MainLayout>
+
+
+<script>
+  const carousel = document.querySelector('[data-carousel="slide"]');
+  const carouselItems = carousel.querySelectorAll('[data-carousel-item]');
+  let carouselIndex = 0;
+
+  setInterval(() => {
+    carouselItems.forEach((item, index) => {
+      if (index === carouselIndex) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+    carouselIndex++;
+    if (carouselIndex >= carouselItems.length) {
+      carouselIndex = 0;
+    }
+  }, 2500);
+</script>

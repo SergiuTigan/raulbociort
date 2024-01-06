@@ -1,0 +1,14 @@
+.showcase {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .info-panel {
+    @apply z-10 absolute max-w-xl h-[50%] left-0 top-[50%] px-12 box-border bg-white opacity-70;
+  }
+
+  img {
+    @apply bg-blend-darken;
+  }
+
+}
