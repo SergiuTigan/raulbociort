@@ -1,14 +1,25 @@
 ---
 const { review } = Astro.props;
 const { image, name, reviewBody, rating } = review;
+//treat the rating if it's 3.5, to add a half star
+const halfStars = rating % 1 !== 0;
+const fullStars = Math.floor(rating);
 ---
 
 <div class="flex items-center justify-center mx-auto p-2 w-[80%]">
   {image &&
-    <img src={image.src} alt={image.alt} class="w-32 h-32 border-solid border-black border-2 p-2"/>
+    <img src={image.src} alt={image.alt} class="w-32 h-32 rounded-2xl shadow-2xl m-2"/>
   }
   <div class="flex flex-col w-2/5 text-left relative ml-5">
     <h1 class="text-gray-900 font-bold text-xl mt-4">{name}</h1>
     <blockquote class="text-gray-500  text-left">"{reviewBody}"</blockquote>
+    <div>
+      {Array.from({ length: fullStars }, (_, index) => (
+        <i class="fa fa-star" aria-hidden="true"></i>
+      ))}
+      {halfStars &&
+        <i class="fa fa-star-half" aria-hidden="true"></i>
+      }
+    </div>
   </div>
 </div>

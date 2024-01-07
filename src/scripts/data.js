@@ -44,7 +44,7 @@ export const reviewsData = [
       alt: "John Doe",
     },
     reviewBody: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.',
-    rating: 5
+    rating: 3
   },
   {
     name: 'John Doe',
@@ -53,7 +53,7 @@ export const reviewsData = [
       alt: "John Doe",
     },
     reviewBody: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.',
-    rating: 5
+    rating: 2.5
   }, {
     name: 'John Doe',
     image: {
@@ -61,7 +61,7 @@ export const reviewsData = [
       alt: "John Doe",
     },
     reviewBody: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.',
-    rating: 5
+    rating: 4.5
   }, {
     name: 'John Doe',
     image: {
@@ -69,6 +69,6 @@ export const reviewsData = [
       alt: "John Doe",
     },
     reviewBody: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.',
-    rating: 5
+    rating: 1.5
   }
 ]

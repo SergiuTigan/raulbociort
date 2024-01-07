@@ -1,4 +1,77 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+const clientsCounter = 0;
 ---
-<MainLayout title="About"/>
+<MainLayout title="About">
+  <div class="flex flex-col w-[90%] mx-auto">
+    <img src="/img/1.jpg" class="h-96 md:block w-[60%] my-5 mx-auto hidden" alt="...">
+  </div>
+  <div class="mt-5 text-center md:text-left md:ml-[23%] font-semibold">
+    <h1 class="text-2xl uppercase text-gray-900">Passion and Love for Architecture.</h1>
+    <p class="mt-2 text-xl text-gray-500"> Vivamus sagittis lacus vel auque laoreet rutrum</p>
+  </div>
+  <div class="flex flex-col w-full md:flex-row justify-around md:w-[75%] md:mx-auto my-10 px-10">
+    <p class="md:w-1/5">Raul Bociort nibh ultricies vehicula ut id elit. Integer
+                        posuere erat a ante venenatis dapibus posuere velit
+                        aliquet. Aenean lacinia bibendum nulla sed
+                        consectetur. Nulla vitae elit libero, a pharetra augue.
+                        Cum sociis natoque penatibus et magnis dis parturient
+                        montes, nascetur ridiculus mus. Done sed odio dui.
+                        Cras mattis consectetur purus sit amet fermentum.
+                        Aenean eu leo quam. Pellentesque ornare sem lacinia
+                        quam venenatis vestibulum.</p>
+    <p class="md:w-1/5">Raul Bociort nibh ultricies vehicula ut id elit. Integer
+                        posuere erat a ante venenatis dapibus posuere velit
+                        aliquet. Aenean lacinia bibendum nulla sed
+                        consectetur. Nulla vitae elit libero, a pharetra augue.
+                        Cum sociis natoque penatibus et magnis dis parturient
+                        montes, nascetur ridiculus mus. Done sed odio dui.
+                        Cras mattis consectetur purus sit amet fermentum.
+                        Aenean eu leo quam. Pellentesque ornare sem lacinia
+                        quam venenatis vestibulum.</p>
+  </div>
+  <div class="flex md:flex-row flex-col mx-auto w-[50%] md:py-24 py-8">
+    <div class="flex flex-col text-center mr-0">
+      <p class="text-2xl" id="clients"></p>
+      <h1 class="text-gray-500">Happy Clients</h1>
+    </div>
+    <div class="flex flex-col text-center mx-auto border-t-2 border-b-2 md:border-b-0 md:border-t-0 md:border-l-2 md:border-r-2 border-gray-900 py-8 md:py-0 border-solid md:px-32">
+      <p class="text-2xl" id="projects"></p>
+      <h1 class="text-gray-500">Projects Completed</h1>
+    </div>
+    <div class="flex flex-col text-center ml-0">
+      <p class="text-2xl" id="coffees"></p>
+      <h1 class="text-gray-500">Cups of Coffee</h1>
+    </div>
+  </div>
+</MainLayout>
+
+<script>
+  const clients = document.getElementById('clients');
+  const projects = document.getElementById('projects');
+  const coffees = document.getElementById('coffees');
+
+  const clientsCounter = 93;
+  const projectsCounter = 172;
+  const coffeesCounter = 3562;
+
+  const clientsInterval = setInterval(() => {
+    clients.innerText = String(+clients.innerText + 1);
+    if (clients.innerText == clientsCounter) {
+      clearInterval(clientsInterval);
+    }
+  }, 25);
+  const projectsInterval = setInterval(() => {
+    projects.innerText = String(+projects.innerText + 1);
+    if (projects.innerText == projectsCounter) {
+      clearInterval(projectsInterval);
+    }
+  }, 25);
+
+  const coffeesInterval = setInterval(() => {
+    coffees.innerText = String(+coffees.innerText + 1);
+    if (coffees.innerText == coffeesCounter) {
+      clearInterval(coffeesInterval);
+    }
+  }, 1);
+</script>
