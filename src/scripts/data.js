@@ -6,7 +6,8 @@ export const servicesData = [
       src: "/img/icons/arch.png",
       alt: "Architecture Icon",
     },
-    description: "Architecture is the art and science of designing and engineering large structures and buildings."
+    description: "Architecture is the art and science of designing and engineering large structures and buildings.",
+    buttonText: "Mai Multe"
   },
   {
     navigationLink: "../../../services/interior-design",
@@ -15,7 +16,8 @@ export const servicesData = [
       src: "/img/icons/intDes.png",
       alt: "Interior Design Icon",
     },
-    description: "Interior design is the art and science of enhancing the interior of a building to achieve a healthier and more aesthetically pleasing environment for the people using the space."
+    description: "Interior design is the art and science of enhancing the interior of a building to achieve a healthier and more aesthetically pleasing environment for the people using the space.",
+    buttonText: "Mai Multe"
   },
   {
     navigationLink: "../../../services/landscape-design",
@@ -24,7 +26,8 @@ export const servicesData = [
       src: "/img/icons/landscape.png",
       alt: "Landscape Design Icon",
     },
-    description: "Landscape design is an independent profession and a design and art tradition, practised by landscape designers, combining nature and culture."
+    description: "Landscape design is an independent profession and a design and art tradition, practised by landscape designers, combining nature and culture.",
+    buttonText: "Mai Multe"
   },
   {
     navigationLink: "../../../services/full-business-plan",
@@ -33,7 +36,8 @@ export const servicesData = [
       src: "/img/icons/business.png",
       alt: "Urban Design Icon",
     },
-    description: "Urban design is the process of designing and shaping the physical features of cities, towns, and villages and planning for the provision of municipal services to residents and visitors."
+    description: "Urban design is the process of designing and shaping the physical features of cities, towns, and villages and planning for the provision of municipal services to residents and visitors.",
+    buttonText: "Mai Multe"
   }
 ]
 export const reviewsData = [

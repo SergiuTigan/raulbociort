@@ -1,0 +1,6 @@
+.service{
+  @apply border-b-2 border-gray-200 border-solid;
+  &:last-child{
+    @apply border-0;
+  }
+}

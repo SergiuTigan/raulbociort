@@ -5,6 +5,7 @@ import MainSection from '../components/MainSection.astro';
 import { reviewsData, servicesData } from '../scripts/data';
 import Service from '../components/Service.astro';
 import Review from '../components/Review.astro';
+const classes = [];
 ---
 <MainLayout title="Home">
   <MainSection/>
@@ -13,9 +14,12 @@ import Review from '../components/Review.astro';
     <p class="text-gray-500">Vivamus sagittis lacus vel augue laoreet futum</p>
   </div>
   <div class="grid md:grid-cols-2 grid-cols-1">
-    {servicesData.map((service, index) => (
-      <Service {service}/>
-    ))}
+    {servicesData.map((service, index) => {
+      service.buttonText = 'Mai Multe';
+      return (
+        <Service {service} {classes}/>
+      );
+    })}
   </div>
   <div class="w-full flex flex-col md:flex-row justify-around mx-auto my-5">
     <img src="/img/bociort_baci.jpg" class="w-96 h-96 border-[rgba(0,0,0,0.5)] border-solid border-2">
